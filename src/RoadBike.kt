@@ -1,8 +1,11 @@
-class RoadBike(
-    wheels: Wheels,
-    brakes: Brakes,
-    suspension: Suspension? = null,
-    gears: Gears
+data class RoadBike(
+    val size: Size,
+    val frontWheel: Wheel,
+    val rearWheel: Wheel,
+    val gears: Gears
 ) :
-    Bike(wheels, brakes, suspension, gears) {
+    Bike(
+        size, frontWheel, rearWheel, suspension = null, gears
+    ) {
+
 }

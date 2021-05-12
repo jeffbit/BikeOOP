@@ -1,8 +1,8 @@
-class Wheels(
-    private val numberOfWheels: Int = 2,
+data class Wheel(
+    private val brake: Brake? = null,
     private val wheelSize: Int,
     private val wheelRimMaterial: RimMaterialType = RimMaterialType.Aluminum,
-    private val tires: Tires
+    private val tire: Tire
 
 ) {
 }

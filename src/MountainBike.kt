@@ -1,9 +1,12 @@
-class MountainBike(
-    wheels: Wheels,
-    brakes: Brakes,
-    suspension: Suspension,
-    gears: Gears) :
-    Bike(wheels, brakes, suspension, gears) {
+data class MountainBike(
+    val size: Size,
+    val frontWheel: Wheel,
+    val rearWheel: Wheel,
+    val suspension: Suspension,
+    val gears: Gears
+) : Bike(
+    size, frontWheel, rearWheel, suspension, gears
+) {
 
 
 }

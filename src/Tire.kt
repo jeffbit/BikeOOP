@@ -1,11 +1,11 @@
-class Tires(
+data class Tire(
     private val tireWidth: Double,
     private val tireMaterial: TireMaterial = TireMaterial.Rubber,
     private val tubeLess: Boolean = false
 
 ) : AirPressure {
 
-    protected fun fixPuncture() {
+    private fun fixPuncture() {
         when (tubeLess) {
             true -> {
                 when (tireMaterial) {

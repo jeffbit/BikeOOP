@@ -1,4 +1,4 @@
-class Gears(
+data class Gears(
     private val frontChainRingSize: Int,
     private val rearCassetteSize: Int = 0,
     private val brand: String
