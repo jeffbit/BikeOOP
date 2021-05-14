@@ -5,9 +5,9 @@ import main.bikecomponents.Wheel
 
 
 class FoldingBike(
-    override val foldingType: FoldingType,
-    val bike: BikeData,
-) : Bike by bike, Folding {
+    val folding: Folding,
+    val bike: Bike,
+) : Bike by bike, Folding by folding {
 
 }
 

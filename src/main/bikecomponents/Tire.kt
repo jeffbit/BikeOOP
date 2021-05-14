@@ -32,10 +32,11 @@ data class Tire(
     override fun decreaseAirPressure() {
         TODO("Not yet implemented")
     }
-}
 
 
-sealed class TireMaterial() {
-    object Kevlar : TireMaterial()
-    object Rubber : TireMaterial()
+    sealed class TireMaterial() {
+        object Kevlar : TireMaterial()
+        object Rubber : TireMaterial()
+    }
 }
+

@@ -3,15 +3,15 @@ package main
 import main.bikecomponents.Shock
 import main.electricbikecomponents.Battery
 import main.electricbikecomponents.Electric
+import main.electricbikecomponents.ElectricImpl
 import main.mountainbikecomponents.Suspension
+import main.mountainbikecomponents.SuspensionImpl
 
 class ElectricMountainBike(
-    override val motor: Motor,
-    override val battery: Battery,
-    override val frontSuspension: Shock,
-    override val rearSuspension: Shock,
-    val bike: BikeData,
-) : Bike by bike, Electric, Suspension {
+    val electric: Electric,
+    val suspension: Suspension,
+    val bike: Bike,
+) : Bike by bike, Electric by electric, Suspension by suspension {
 
     init {
         println("Electric Mountain main.Bike: Electric Mountain main.Bike starting up")

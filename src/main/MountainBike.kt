@@ -2,16 +2,16 @@ package main
 
 import main.bikecomponents.Shock
 import main.mountainbikecomponents.Suspension
+import main.mountainbikecomponents.SuspensionImpl
 
 
 class MountainBike(
-    override val frontSuspension: Shock,
-    override val rearSuspension: Shock,
-    val bike: BikeData
-) : Bike by bike, Suspension {
+    val suspension: Suspension,
+    val bike: Bike
+) : Bike by bike, Suspension by suspension {
 
 
     fun returnSuspensionType() {
-        print("Front shock brand ${frontSuspension?.getBrand}. Rear shock brand ${rearSuspension?.getBrand}")
+        print("Front shock brand ${frontSuspension.getBrand}. Rear shock brand ${rearSuspension.getBrand}")
     }
 }

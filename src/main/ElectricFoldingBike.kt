@@ -1,13 +1,13 @@
 import main.*
 import main.electricbikecomponents.Battery
 import main.electricbikecomponents.Electric
+import main.electricbikecomponents.ElectricImpl
 
 class ElectricFoldingBike(
-    override val foldingType: FoldingType,
-    override val motor: Motor,
-    override val battery: Battery,
-    val bike: BikeData,
-) : Bike by bike, Electric, Folding {
+    val electric: Electric,
+    val folding: Folding,
+    val bike: Bike,
+) : Bike by bike, Folding by folding, Electric by electric {
     init {
         println("Electric Folding Bike: Electric Folding Bike starting up")
     }

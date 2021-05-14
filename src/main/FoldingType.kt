@@ -1,5 +1,11 @@
 package main
 
+
+class FoldingImpl(
+    override val foldingType: FoldingType
+) : Folding
+
+
 interface Folding {
     val foldingType: FoldingType
 }

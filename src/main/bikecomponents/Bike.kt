@@ -4,7 +4,7 @@ import main.bikecomponents.Gears
 import main.bikecomponents.Wheel
 
 //BikeImpl
-data class BikeData(
+data class BikeImpl(
     override val size: Size,
     override val frontWheel: Wheel,
     override val rearWheel: Wheel,
