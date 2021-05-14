@@ -5,16 +5,10 @@ import main.electricbikecomponents.Battery
 import main.electricbikecomponents.Electric
 import main.mountainbikecomponents.Suspension
 
-val standardMountainBikeSuspension = Suspension(
-    frontSuspension = Shock(
-        travelAmount = 140,
-        adjustable = true,
-        shockType = ShockType.Air, brand = "FOX"
-    ), rearSuspension = Shock(
-        travelAmount = 140,
-        adjustable = false,
-        shockType = ShockType.Air, brand = "FOX"
-    )
+val standardMountainBikeShock = Shock(
+    travelAmount = 140,
+    adjustable = true,
+    shockType = ShockType.Air, brand = "FOX"
 )
 
 val standardTire = Tire(
@@ -38,7 +32,7 @@ val standardGears = Gears(
     brand = "Shimano"
 )
 
-val standardBikeData = BikeData(
+val standardBikeData = main.BikeData(
     size = Size.Medium,
     frontWheel = standardBikeWheel,
     rearWheel = standardBikeWheel,
@@ -46,7 +40,8 @@ val standardBikeData = BikeData(
 )
 
 val standardMountainBike = MountainBike(
-    suspension = standardMountainBikeSuspension,
+    frontSuspension = standardMountainBikeShock,
+    rearSuspension = standardMountainBikeShock,
     bike = standardBikeData
 )
 
@@ -78,19 +73,17 @@ val standardBattery = Battery(
     waterResistant = false,
     batteryLife = 100
 )
-
-val standardElectricData = Electric(
-    motor = standardMotor,
-    battery = standardBattery
-)
-
-
 val standardElectricMountainBike = ElectricMountainBike(
-    electric = standardElectricData,
-    mountainBike = standardMountainBike
+    motor = standardMotor,
+    battery = standardBattery,
+    frontSuspension = standardMountainBikeShock,
+    rearSuspension = standardMountainBikeShock,
+    bike = standardBikeData
 )
 
 val standardElectricFoldingBike = ElectricFoldingBike(
-    electricBike = standardElectricData,
-    foldingBike = standardFoldingBike
+    foldingType = FoldingType.HalfFold,
+    motor = standardMotor,
+    battery = standardBattery,
+    bike = standardBikeData
 )

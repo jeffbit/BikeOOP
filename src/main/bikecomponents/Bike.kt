@@ -3,7 +3,7 @@ package main
 import main.bikecomponents.Gears
 import main.bikecomponents.Wheel
 
-
+//BikeImpl
 data class BikeData(
     override val size: Size,
     override val frontWheel: Wheel,
@@ -23,11 +23,8 @@ data class BikeData(
     val returnGears: Gears
         get() = gears
 
-    fun getCurrentWheelSize(): Int {
-        return frontWheel.getWheelSize
-    }
-}
 
+}
 
 sealed class Size() {
     object ExtraSmall : Size()

@@ -5,17 +5,12 @@ import main.electricbikecomponents.Battery
 import main.electricbikecomponents.Electric
 import main.mountainbikecomponents.Suspension
 
-class ElectricMountainBike(
+class ElectricFoldingMountainBike(
+    override val foldingType: FoldingType,
     override val motor: Motor,
     override val battery: Battery,
-    override val frontSuspension: Shock,
-    override val rearSuspension: Shock,
+    override val frontSuspension: Shock?,
+    override val rearSuspension: Shock?,
     val bike: BikeData,
-) : Bike by bike, Electric, Suspension {
-
-    init {
-        println("Electric Mountain main.Bike: Electric Mountain main.Bike starting up")
-    }
-
-
+    ) : Bike by bike, Folding, Electric, Suspension {
 }
