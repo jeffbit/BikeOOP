@@ -1,5 +1,6 @@
 package main
 
+import ElectricFoldingBike
 import main.bikecomponents.*
 import main.electricbikecomponents.Battery
 import main.electricbikecomponents.Electric
