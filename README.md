@@ -1,2 +1,3 @@
 # BikeOOP
-Read me for main.Bike OOP project
+Read me for Bike OOP project.
+Small sample project written in Kotlin to showcase OOP design/concepts, Unit testing, and Test Drive Development. 
