@@ -11,13 +11,13 @@ data class Tire(
         when (tubeLess) {
             true -> {
                 when (tireMaterial) {
-                    TireMaterial.Kevlar -> println("main.bikecomponents.Tire cannot be punctured")
-                    TireMaterial.Rubber -> println("main.bikecomponents.Tire needs more sealant to fix puncture")
+                    TireMaterial.Kevlar -> println("Tire cannot be punctured")
+                    TireMaterial.Rubber -> println("Tire needs more sealant to fix puncture")
                 }
             }
             false -> {
                 when (tireMaterial) {
-                    TireMaterial.Kevlar -> println("main.bikecomponents.Tire cannot be punctured")
+                    TireMaterial.Kevlar -> println("Tire cannot be punctured")
                     TireMaterial.Rubber -> println("Please replace your innertube")
                 }
 
